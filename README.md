@@ -17,6 +17,8 @@ and launch an ocsigen server.
 
 ## Available examples
 
+* __Page__
+  Documentation URL coming soon...
 * __Skeletton__
   Documentation URL coming soon...
 
