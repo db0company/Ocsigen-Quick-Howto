@@ -2,7 +2,7 @@
 (* Project: Ocsigen Quick Howto : Skeletton                                   *)
 (* Description: Example of usage of a skeletton to generate pages             *)
 (* Author: db0 (db0company@gmail.com, http://db0.fr/)                         *)
-(* Latest Version is on GitHub: https://github.com/db0company/Konami          *)
+(* Latest Version is on GitHub: http://goo.gl/sfvvq                           *)
 (* ************************************************************************** *)
 
 open Eliom_content
