@@ -105,7 +105,7 @@ function	clean() {
     if [ -z "$answer" ]||[ $answer == "y" ]
     then
 	rm -rf $generated_files
-	rm static/example.js
+	rm -f static/example.js
 	echo "Done"
     else
 	echo "Generated files are in \"$generated_files\" folder."
