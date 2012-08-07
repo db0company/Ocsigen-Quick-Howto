@@ -2,7 +2,7 @@
 ## Sample Makefile for eliom application.
 
 APP_NAME := example
-STATICDIR := ./static
+STATICDIR := ../static
 
 ## Packages required to build the server part of the application
 
@@ -124,7 +124,7 @@ include .depend
 ## installation #########
 
 $(STATICDIR):
-	mkdir -p $@
+	@mkdir -p $@
 
 install: all $(STATICDIR)
-	cp $(APP_NAME).js $(STATICDIR)/$(APP_NAME).js
+	@cp $(APP_NAME).js $(STATICDIR)/$(APP_NAME).js

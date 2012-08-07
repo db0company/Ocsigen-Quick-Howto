@@ -97,6 +97,7 @@ function	launch() {
 function	clean() {
     generated_files=$1
     rm -f *.bak
+    make clean > /dev/null
     cd - > /dev/null
     rm -rf tmp
     echo -n "Remove generated files (Y/n)? "
