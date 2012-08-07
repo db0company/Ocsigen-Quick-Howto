@@ -1,0 +1,56 @@
+/* ************************************************************************* */
+/* Project: Ocsigen Quick Howto : CSS                                        */
+/* Description: Example of a page with CSS stylesheet                        */
+/* Author: db0 /db0company@gmail.com, http://db0.fr//                        */
+/* Latest Version is on GitHub: http://goo.gl/sfvvq                          */
+/* ************************************************************************* */
+
+body {
+    margin: auto;
+    background: white;
+    font-family: sans-serif;
+    color: #000000;
+}
+
+h1 {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 2.5em;
+    padding: 2%;
+    width: 92%;
+    background-color: #FF9000;
+    color: white;
+}
+
+.menu {
+    float: left;
+    width: 20%;
+    margin: 2%;
+    margin-top: 0;
+    padding: 1%;
+    list-style-type: none;
+    background-color: #0A64A4;
+    border: 1px solid #03406A;
+    color: white;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 2%;
+    line-height: 1.1em;
+}
+
+.menu li {
+    padding: 3%;
+}
+
+.menu li:hover{
+    background-color: #FF9000;
+    font-weight: bold;
+}
+
+.page {
+    margin-left: 26%;
+    margin-right: 3%;
+}
