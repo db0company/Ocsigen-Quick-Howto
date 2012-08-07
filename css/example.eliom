@@ -69,7 +69,7 @@ let _ =
 	   (head
 	      (title (pcdata "Ocsigen CSS Example"))
 	      [css_link ~uri:(make_uri (Eliom_service.static_dir ())
-				["css";"style.css"]) ()])
+				["style.css"]) ()])
            (body [page_title ();
 		  page_menu ();
 		  div ~a:[a_class ["page"]]

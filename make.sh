@@ -7,11 +7,22 @@
 ## Latest Version is on GitHub: http://goo.gl/sfvvq                           ##
 ## ########################################################################## ##
 
-generated_files="files"
+generated_files="src"
 
 function	usage() {
     echo "usage: $0 example_directory" >&2
     exit 1
+}
+
+function	install_file() {
+    filename="$1/.install.sh"
+    if [ -e $filename ]
+    then
+	chmod +x $filename
+	$filename
+	return $?
+    fi
+    return 0
 }
 
 function	init() {
@@ -105,11 +116,11 @@ function	clean() {
     if [ -z "$answer" ]||[ $answer == "y" ]
     then
 	rm -rf $generated_files
-	rm -f static/example.js
+	rm -rf static
 	echo "Done"
     else
-	echo "Generated files are in \"$generated_files\" folder."
-	ls $generated_files
+	echo "Generated files are in \"$generated_files\" folder and in \"static\" folder."
+	ls $generated_files static
     fi
 }
 
@@ -118,6 +129,7 @@ then usage
 fi
 
 init $generated_files $1 && \
+    install_file $project_name && \
     generate_makefile $generated_files "$generated_files/Makefile" && \
     generate_conf_file $generated_files "$generated_files/example.conf" && \
     compile $generated_files && \
