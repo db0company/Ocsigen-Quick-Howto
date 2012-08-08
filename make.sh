@@ -90,7 +90,7 @@ function	compile() {
 function	launch() {
     echo -n "Launch server with generated files (Y/n)? "
     read answer
-    if [ -z "$answer" ]||[ $answer == "y" ]
+    if [ -z "$answer" ]||[ $answer == "y" ]||[ $answer == 'Y' ]
     then
 	type ocsigenserver > /dev/null
 	if [ $? -ne 0 ]
@@ -113,7 +113,7 @@ function	clean() {
     rm -rf tmp
     echo -n "Remove generated files (Y/n)? "
     read answer
-    if [ -z "$answer" ]||[ $answer == "y" ]
+    if [ -z "$answer" ]||[ $answer == "y" ]||[ $answer == 'Y' ]
     then
 	rm -rf $generated_files
 	rm -rf static
