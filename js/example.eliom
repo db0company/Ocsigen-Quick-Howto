@@ -38,12 +38,10 @@ let _ =
   Example.register
     ~service:main
     (fun () () ->
-      let clickable_div =
-	div ~a:[a_onclick {{ Js.Unsafe.eval_string "hello_function()" }}]
-	  [pcdata "Click me!"] in
       Lwt.return
 	(html
 	   (head (title (pcdata "Hello World of Ocsigen"))
 	      [js_script ~uri:(make_uri (Eliom_service.static_dir ())
 				 ["hello.js"]) ()])
-	   (body [clickable_div])))
+	   (body [div ~a:[a_onclick {{ Js.Unsafe.eval_string "hello_function()" }}]
+		     [pcdata "Click me!"]])))
