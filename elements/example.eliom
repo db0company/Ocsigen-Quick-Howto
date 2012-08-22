@@ -75,6 +75,22 @@ let definition_list_example () =
       (dd [pcdata "Egg-sized green fruit from China"], []))]
 
 (* ************************************************************************** *)
+(* IMAGE                                                                      *)
+(* ************************************************************************** *)
+
+let internal_image () =
+  img ~alt:("Ocsigen Logo")
+      ~src:(make_uri
+	      ~service:(Eliom_service.static_dir ())
+	      ["ocsigen_logo.png"])
+    ()
+
+let external_image () =
+  img ~alt:("Ocsigen Logo")
+      ~src:(Xml.uri_of_string ("http://ocsigen.org/resources/logos/text_ocsigen_with_shadow.png"))
+    ()
+
+(* ************************************************************************** *)
 (* Service definition                                                         *)
 (* ************************************************************************** *)
 
@@ -96,7 +112,11 @@ let _ =
 		       h3 [pcdata "Examples of list"];
 		       simple_list_example ();
 		       ordered_list_example ();
-		       definition_list_example ()
+		       definition_list_example ();
+
+		       h3 [pcdata "Examples of image"];
+		       internal_image ();
+		       external_image ();
 		     ]
 		 ]
 	   )
