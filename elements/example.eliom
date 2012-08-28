@@ -91,6 +91,29 @@ let external_image () =
     ()
 
 (* ************************************************************************** *)
+(* Titles and paragraphs                                                      *)
+(* ************************************************************************** *)
+
+let titles_and_paragraphs () =
+  div ~a:[a_class ["well"]]
+    [
+      h1 [pcdata "Title of the page"];
+      h2 [pcdata "Subtitle: a short description of the page"];
+      h3 [pcdata "Chapter 1"];
+      h4 [pcdata "Section 1"];
+      p [pcdata "Some text, semper nec lacinia vel, ultricies eu nulla. Proin lacinia justo nec sem sagittis a tincidunt est blandit. Aliquam tincidunt vulputate sapien, quis semper ligula pellentesque a."];
+      h4 [pcdata "Section 2"];
+      h5 [pcdata "Subsection 1"];
+      p [pcdata "Some text, Duis sollicitudin, felis vitae dapibus lobortis. Donec placerat, sapien vel fringilla volutpat, purus nibh dignissim elit, non volutpat elit felis sit amet nulla. Proin eget eros odio, non pretium ante."];
+      h6 [pcdata "Something you should reed"];
+      p [pcdata "Some text. Duis lectus enim, viverra a aliquet sed, aliquet sit amet lectus."];
+      h5 [pcdata "Subsection 2"];
+      p [pcdata "Sed ac enim vel metus placerat bibendum. Fusce ligula est, laoreet et vestibulum quis, semper sit amet felis. Vestibulum orci nisl, mattis a lobortis id, tincidunt id nisi. Sed scelerisque metus vitae tellus molestie placerat. Aenean nisl ligula, malesuada eu pellentesque eget, ultricies sed elit. Sed eu ligula ligula. Vivamus eu diam quis orci venenatis viverra ac ut orci. Suspendisse a consectetur enim. Cras at dolor a tellus egestas posuere. Nunc sit amet lorem velit. Nunc nec turpis massa, vel tempus lorem. Vivamus at dolor ut tellus accumsan rhoncus."];
+      h3 [pcdata "Chapter 2"];
+      p [pcdata "Proin eget eros odio, non pretium ante."]
+    ]
+
+(* ************************************************************************** *)
 (* Service definition                                                         *)
 (* ************************************************************************** *)
 
@@ -117,6 +140,9 @@ let _ =
 		       h3 [pcdata "Examples of image"];
 		       internal_image ();
 		       external_image ();
+
+		       h3 [pcdata "Examples of titles and paragraphs"];
+		       titles_and_paragraphs ();
 		     ]
 		 ]
 	   )
