@@ -56,6 +56,7 @@ function	generate_makefile() {
 function	generate_conf_file() {
     generated_files=$1
     file=$2
+    default_port=8080
     pwd=`pwd | sed 's#\/#\\\/#g'`
     files=`\ls -1 $generated_files/ \
 	| \grep '.eliom$' \
@@ -66,9 +67,12 @@ function	generate_conf_file() {
 	| xargs \
 	| sed 's#\ ##'`
     echo "Generating Configuration file... "
-    echo -n "Port number? " && \
+    echo -n "Port number ("$default_port")? " && \
 	read port && \
-	sed -i".bak" 's/\$PORT\$/'$port'/' $file && \
+	if [ -z $port ]
+         then sed -i".tmp" 's/\$PORT\$/'$default_port'/' $file
+         else sed -i".tmp" 's/\$PORT\$/'$port'/' $file
+        fi && \
 	sed -i".bak" 's/\$PWD\$/'$pwd'/' $file && \
 	sed -i".bak" 's/\$FILES\$/'$files'/' $file && \
 	sed -i".bak" 's/\$SPACE\$/ /g' $file && \
