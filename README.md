@@ -34,11 +34,6 @@ and launch an ocsigen server.
   Make your website beautiful by adding some CSS
 * Documentation: [How to add a CSS stylesheet?](http://ocsigen.org/howto/css)
 
-#### Js
-
-  Need to add an external Javascript script?
-* Documentation: [How to add a Javacript script?](http://ocsigen.org/howto/js)
-
 #### Elements
 
   So many HTML5 elements available, which one will I choose?
@@ -48,6 +43,16 @@ and launch an ocsigen server.
 
   Get parameters in your pages services
 * Documentation: [How to use "get" parameters or parameters in the URL?](http://ocsigen.org/howto/parameters)
+
+#### Js
+
+  Need to add an external Javascript script?
+* Documentation: [How to add a Javacript script?](http://ocsigen.org/howto/js)
+
+#### Call Js after form submission
+
+  Call Javascript right after a form is submitted
+* Documentation: [How to call Javascript after a form submission?](http://ocsigen.org/howto/jsform)
 
 ## Copyright/License
 
